@@ -1,4 +1,4 @@
-import { Col, Row, Input, Button, Select, Tag } from "antd";
+import { Col, Row, Input, Button, Select, Tag, Typography } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import Todo from "../Todo";
 import { addTodo } from "./todoListSlice";
@@ -34,7 +34,15 @@ export default function TodoList() {
   };
   return (
     <Row style={{ height: "calc(100% - 40px)" }}>
-      <Col span={24} style={{ height: "calc(100% - 40px)", overflowY: "auto" }}>
+      <Typography.Paragraph
+        style={{
+          fontSize: 20,
+          margin: " auto",
+        }}
+      >
+        List Todo
+      </Typography.Paragraph>
+      <Col span={24} style={{ height: "calc(100% - 70px)", overflowY: "auto" }}>
         {todoList.length > 0 &&
           todoList.map((todo, index) => (
             <Todo

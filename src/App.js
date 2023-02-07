@@ -20,7 +20,9 @@ function App() {
         height: "90vh",
       }}
     >
-      <Title style={{ textAlign: "center" }}>TODO APP with REDUX</Title>
+      <Typography.Paragraph style={{ textAlign: "center", fontSize: 20 }}>
+        Todo App with Redux-toolkit
+      </Typography.Paragraph>
       <Filters />
       <Divider />
       <TodoList />

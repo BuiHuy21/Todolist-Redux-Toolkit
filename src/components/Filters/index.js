@@ -19,7 +19,6 @@ export default function Filters() {
   };
   const [search, setSearch] = useState("");
   const searchFilterChange = (e) => {
-    // console.log(e.target.value);
     setSearch(e.target.value);
     dispatch(searchFilterChang(e.target.value));
   };
@@ -31,22 +30,18 @@ export default function Filters() {
   return (
     <Row justify="center">
       <Col span={24}>
-        <Typography.Paragraph
-          style={{ fontWeight: "bold", marginBottom: 3, marginTop: 10 }}
-        >
-          Search
+        <Typography.Paragraph style={{ marginBottom: 3, marginTop: 10 }}>
+          Search By name Todo
         </Typography.Paragraph>
         <Search
-          placeholder="input search text"
+          placeholder="Enter your search text ..."
           value={search}
           onChange={searchFilterChange}
         />
       </Col>
       <Col sm={24}>
-        <Typography.Paragraph
-          style={{ fontWeight: "bold", marginBottom: 3, marginTop: 10 }}
-        >
-          Filter By Status
+        <Typography.Paragraph style={{ marginBottom: 3, marginTop: 10 }}>
+          Filter By Status Todo
         </Typography.Paragraph>
         <Radio.Group value={status} onChange={handleFilterStatus}>
           <Radio value="All">All</Radio>
@@ -55,15 +50,13 @@ export default function Filters() {
         </Radio.Group>
       </Col>
       <Col sm={24}>
-        <Typography.Paragraph
-          style={{ fontWeight: "bold", marginBottom: 3, marginTop: 10 }}
-        >
+        <Typography.Paragraph style={{ marginBottom: 3, marginTop: 10 }}>
           Filter By Priority
         </Typography.Paragraph>
         <Select
           mode="multiple"
           allowClear
-          placeholder="Please select"
+          placeholder="Please multiple select"
           style={{ width: "100%" }}
           value={priority}
           onChange={handlePriorityChange}

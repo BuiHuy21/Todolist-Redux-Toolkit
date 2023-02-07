@@ -21,7 +21,6 @@ const todoListSlice = createSlice({
     deleteTodo: (state, action) => {
       return state.filter((item) => item.id !== action.payload);
     },
-
     editTodoByName: (state, action) => {
       const index = state.findIndex((item) => item.id === action.payload.id);
       const updatedState = [...state];
