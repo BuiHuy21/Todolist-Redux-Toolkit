@@ -1,12 +1,12 @@
+import { DeleteOutlined, EditOutlined, SaveOutlined } from "@ant-design/icons";
 import { Button, Checkbox, Col, Input, Row, Select, Tag } from "antd";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { EditOutlined, DeleteOutlined, SaveOutlined } from "@ant-design/icons";
 import {
   deleteTodo,
   editTodoByName,
   editTodoByPriority,
-  toggleTodo,
+  toggleTodo
 } from "../TodoList/todoListSlice";
 
 const priorityColorMapping = {
@@ -15,7 +15,7 @@ const priorityColorMapping = {
   Low: "gray",
 };
 
-export default function Todo({ name, priority, completed, id, index }) {
+export default function Todo({ name, priority, completed, id }) {
   const [isEdit, setIsEdit] = useState(false);
   const [editTodoName, setEditTodoName] = useState(name);
   const [checked, setChecked] = useState(completed);
@@ -45,7 +45,6 @@ export default function Todo({ name, priority, completed, id, index }) {
     setIsEdit(true);
   };
   const handleSelectChange = (value) => {
-    // console.log(value);
     setEditTodoPriority(value);
   };
 
@@ -94,9 +93,9 @@ export default function Todo({ name, priority, completed, id, index }) {
             </Select.Option>
           </Select>
         ) : (
-          <Button color={priorityColorMapping[priority]} style={{ margin: 0 }}>
+          <Tag color={priorityColorMapping[priority]} style={{ margin: 0 }}>
             {priority}
-          </Button>
+          </Tag>
         )}
       </Col>
       <Col>

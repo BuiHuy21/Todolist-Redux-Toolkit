@@ -15,7 +15,7 @@ function App() {
         padding: 20,
         boxShadow: "0 0 10px 4px #bfbfbf",
         borderRadius: 5,
-        height: "90vh",
+        height: "100vh",
       }}
     >
       <Typography.Paragraph style={{ textAlign: "center", fontSize: 20 }}>

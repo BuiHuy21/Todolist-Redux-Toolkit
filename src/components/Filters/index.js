@@ -30,7 +30,7 @@ export default function Filters() {
   return (
     <Row justify="center">
       <Col span={24}>
-        <Typography.Paragraph style={{ marginBottom: 3, marginTop: 10 }}>
+        <Typography.Paragraph style={{ marginBottom: 3 }}>
           Search By name Todo
         </Typography.Paragraph>
         <Search
@@ -40,7 +40,7 @@ export default function Filters() {
         />
       </Col>
       <Col sm={24}>
-        <Typography.Paragraph style={{ marginBottom: 3, marginTop: 10 }}>
+        <Typography.Paragraph style={{ marginBottom: 3, marginTop: 8 }}>
           Filter By Status Todo
         </Typography.Paragraph>
         <Radio.Group value={status} onChange={handleFilterStatus}>
@@ -50,7 +50,7 @@ export default function Filters() {
         </Radio.Group>
       </Col>
       <Col sm={24}>
-        <Typography.Paragraph style={{ marginBottom: 3, marginTop: 10 }}>
+        <Typography.Paragraph style={{ marginBottom: 3, marginTop: 8 }}>
           Filter By Priority
         </Typography.Paragraph>
         <Select
