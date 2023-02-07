@@ -1,5 +1,4 @@
 import { createSelector } from "@reduxjs/toolkit";
-import ColumnGroup from "antd/lib/table/ColumnGroup";
 
 export const searchTextSelector = (state) => state.filter.search;
 export const searchStatusSelector = (state) => state.filter.status;

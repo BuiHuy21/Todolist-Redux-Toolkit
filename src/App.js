@@ -1,9 +1,7 @@
-import { Typography, Divider } from "antd";
+import { Divider, Typography } from "antd";
 import "./App.css";
-import TodoList from "./components/TodoList";
 import Filters from "./components/Filters";
-
-const { Title } = Typography;
+import TodoList from "./components/TodoList";
 
 function App() {
   return (

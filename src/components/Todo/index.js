@@ -1,6 +1,7 @@
-import { Row, Tag, Checkbox, Button, Col, Input, Select } from "antd";
-import { useState } from "react";
+import { Button, Checkbox, Col, Input, Row, Select, Tag } from "antd";
+import { useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
+import { EditOutlined, DeleteOutlined, SaveOutlined } from "@ant-design/icons";
 import {
   deleteTodo,
   editTodoByName,
@@ -44,7 +45,7 @@ export default function Todo({ name, priority, completed, id, index }) {
     setIsEdit(true);
   };
   const handleSelectChange = (value) => {
-    console.log(value);
+    // console.log(value);
     setEditTodoPriority(value);
   };
 
@@ -63,7 +64,15 @@ export default function Todo({ name, priority, completed, id, index }) {
           style={{ minWidth: 200 }}
         >
           {isEdit ? (
-            <Input value={editTodoName} onChange={handleInputChange} />
+            <Input
+              value={editTodoName}
+              style={{
+                outline: "none",
+                border: "none",
+                borderBottom: "1px solid green",
+              }}
+              onChange={handleInputChange}
+            />
           ) : (
             editTodoName
           )}
@@ -97,7 +106,8 @@ export default function Todo({ name, priority, completed, id, index }) {
             type="primary"
             onClick={HandleSave}
           >
-            Save
+            {/* Save */}
+            <SaveOutlined />
           </Button>
         ) : (
           <Button
@@ -105,12 +115,14 @@ export default function Todo({ name, priority, completed, id, index }) {
             type="primary"
             onClick={HandleEdit}
           >
-            Edit
+            {/* Edit */}
+            <EditOutlined />
           </Button>
         )}
 
         <Button danger onClick={handleDeleteTodo}>
-          Delete
+          {/* Delete */}
+          <DeleteOutlined />
         </Button>
       </Col>
     </Row>

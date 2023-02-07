@@ -1,4 +1,3 @@
-/* eslint-disable array-callback-return */
 import { createSlice } from "@reduxjs/toolkit";
 const initialState = [
   { id: 1, name: "Learn ReactJS", completed: true, priority: "High" },
