@@ -22,17 +22,23 @@ const todoListSlice = createSlice({
       return state.filter((item) => item.id !== action.payload);
     },
 
-    editTodo: (state, action) => {
-      const todoListArr = [...state];
-      todoListArr.forEach((todo) => {
-        if (todo.id === action.payload.id) {
-          todo.name = action.payload.editTodoName;
-        }
-      });
-      state = [...todoListArr];
+    editTodoByName: (state, action) => {
+      const index = state.findIndex((item) => item.id === action.payload.id);
+      const updatedState = [...state];
+      updatedState[index].name = action.payload.name;
+    },
+    editTodoByPriority: (state, action) => {
+      const index = state.findIndex((item) => item.id === action.payload.id);
+      const updatedState = [...state];
+      updatedState[index].priority = action.payload.priority;
     },
   },
 });
-export const { addTodo, toggleTodo, deleteTodo, editTodo } =
-  todoListSlice.actions;
+export const {
+  addTodo,
+  toggleTodo,
+  deleteTodo,
+  editTodoByName,
+  editTodoByPriority,
+} = todoListSlice.actions;
 export default todoListSlice.reducer;

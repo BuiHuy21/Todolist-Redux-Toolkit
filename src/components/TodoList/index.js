@@ -18,7 +18,6 @@ export default function TodoList() {
   };
 
   const handleSelectChange = (value) => {
-    // console.log(value);
     setPriority(value);
   };
   const handleAddTodo = () => {
