@@ -1,4 +1,4 @@
-import { Button, Col, Input, Row, Select, Tag, Typography } from "antd";
+import { Button, Col, Input, Row, Select, Tag } from "antd";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { v4 } from "uuid";
@@ -30,6 +30,7 @@ export default function TodoList() {
           })
         )
       : alert("Please type your todoname");
+    setTodoName("");
   };
   return (
     <Row style={{ height: "calc(100% - 40px)" }}>

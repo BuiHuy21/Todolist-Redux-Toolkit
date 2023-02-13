@@ -6,7 +6,7 @@ import {
   deleteTodo,
   editTodoByName,
   editTodoByPriority,
-  toggleTodo
+  toggleTodo,
 } from "../TodoList/todoListSlice";
 
 const priorityColorMapping = {
